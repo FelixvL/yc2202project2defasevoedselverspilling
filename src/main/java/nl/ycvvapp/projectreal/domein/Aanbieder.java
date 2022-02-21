@@ -11,5 +11,5 @@ public class Aanbieder {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	
-	String naam;
+	public String naam;
 }
