@@ -11,5 +11,31 @@ public class Aanvrager {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	
-	String titel;
+	private String titel;
+	private int aantalPersonen;
+	private String bedrijfsnaam;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getTitel() {
+		return titel;
+	}
+	public void setTitel(String titel) {
+		this.titel = titel;
+	}
+	public int getAantalPersonen() {
+		return aantalPersonen;
+	}
+	public void setAantalPersonen(int aantalPersonen) {
+		this.aantalPersonen = aantalPersonen;
+	}
+	public String getBedrijfsnaam() {
+		return bedrijfsnaam;
+	}
+	public void setBedrijfsnaam(String bedrijfsnaam) {
+		this.bedrijfsnaam = bedrijfsnaam;
+	}
 }
