@@ -13,7 +13,7 @@ public class AanvragerService {
 	
 	public void maakNieuweAanbieder() {
 		Aanvrager aa = new Aanvrager();
-		aa.titel = "mijn titel";
+		aa.setTitel("mijn titel");
 		aar.save(aa);
 		System.out.println("Ik ben in nieuwe Aanbiederservice");
 	}
