@@ -12,9 +12,12 @@ public class AfhaalAfspraakService {
 	
 	public void maakNieuweAfhaalAfspraak() {
 		AfhaalAfspraak aa = new AfhaalAfspraak();
-		aa.titel = "mijn titel";
+		aa.setTitel("mijn titel");
 		aar.save(aa);
 		System.out.println("Ik ben in nieuwe AfhaalAfspraakService");
 	}
-
+	public Iterable<AfhaalAfspraak> go() {
+		 Iterable<AfhaalAfspraak> abcdef = aar.findAll();
+		 return abcdef;
+	}
 }
