@@ -10,9 +10,9 @@ public class AanbiederService {
 	@Autowired
 	AanbiederRepository ar;
 	
-	public void maakNieuweAanbieder() {
+	public void maakNieuweAanbieder(String naam) {
 		Aanbieder a = new Aanbieder();
-		a.naam = "mijn naam";
+		a.naam = naam;
 		ar.save(a);
 		System.out.println("Ik ben een nieuwe aanbieder");
 	}
