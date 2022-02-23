@@ -10,6 +10,12 @@ public class AfhaalAfspraakService {
 	@Autowired
 	AfhaalAfspraakRepository aar;
 	
+	public void methodeMetEigenInvulling(String deTitel) {
+		AfhaalAfspraak aa = new AfhaalAfspraak();
+		aa.setTitel(deTitel);
+		aar.save(aa);
+	}
+	
 	public void maakNieuweAfhaalAfspraak() {
 		AfhaalAfspraak aa = new AfhaalAfspraak();
 		aa.setTitel("mijn titel");
@@ -20,4 +26,13 @@ public class AfhaalAfspraakService {
 		 Iterable<AfhaalAfspraak> abcdef = aar.findAll();
 		 return abcdef;
 	}
+	public AfhaalAfspraak geefEenAfspraak() {
+		AfhaalAfspraak aa = new AfhaalAfspraak();
+		aa.setAantalpersonen(4);
+		aa.setTijdstip(1800);
+		aa.setTitel("Je komt de kast ophalen");
+		return aa;
+	}
+	
+	
 }

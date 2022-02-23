@@ -28,11 +28,12 @@ public class AfhaalAfspraakEndpoint {
 	@GetMapping("/var/{qqqaaa}")
 	public String derdeMethode(@PathVariable("qqqaaa") String abc) {	
 		System.out.println("dit is variable"+abc);
+		aas.methodeMetEigenInvulling(abc);
 		return "dit is mijn output";
 	}
 	@GetMapping("/returntype")
 	public AfhaalAfspraak derdeMethode() {	
-		return new AfhaalAfspraak();
+		return aas.geefEenAfspraak();
 	}
 	@GetMapping("/getmeall")
 	public Iterable<AfhaalAfspraak> getmeall() {	
