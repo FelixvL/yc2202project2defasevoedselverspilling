@@ -19,8 +19,10 @@ public class AanvragerEndpoint {
 		System.out.println("here we goo jesse");
 	}
 	
+
 	@GetMapping("/jesse/returntype")
 	public Aanvrager aanvrager() {
+
 		Aanvrager aa = new Aanvrager();
 		aa.setAantalPersonen(10);
 		aa.setBedrijfsnaam("macDonalds");
