@@ -13,15 +13,7 @@ public class Item {
 	
 	long id;
 	private String name;
-	private int amount;
-//	private int bestbefore;
-	
-//	//constructor
-//	public Item (String name, int amount, int bestbefore) {
-//		this.name =name;
-//		this.amount = amount;
-//		this.bestbefore = bestbefore;
-//	}
+
 	
 	public long getId() {
 		return id;
@@ -35,18 +27,5 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAmount() {
-		return amount;
-	}
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-//	public int getBestbefore() {
-//		return bestbefore;
-//	}
-//	public void setBestbefore(int bestbefore) {
-//		this.bestbefore = bestbefore;
-//	}
-	
 
 }
