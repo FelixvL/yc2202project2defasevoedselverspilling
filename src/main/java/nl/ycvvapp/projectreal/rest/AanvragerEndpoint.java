@@ -21,7 +21,7 @@ public class AanvragerEndpoint {
 		System.out.println("here we goo jesse");
 	}
 	
-	@GetMapping("/returntype")
+	@GetMapping("/returntype2")
 	public Aanvrager aanvrager (){
 		Aanvrager aa = new Aanvrager();
 		aa.setAantalPersonen(10);

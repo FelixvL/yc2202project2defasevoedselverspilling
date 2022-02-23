@@ -12,7 +12,7 @@ public class AanbiederEndpoint {
 	@Autowired
 	AanbiederService as;
 	
-	@GetMapping("/var/{qqqaaa}")
+	@GetMapping("/var2/{qqqaaa}")
 	public String eersteMethode(@PathVariable("qqqaaa") String abc) {
 		System.out.println("De aanbieder "+ abc + " is toegevoegd");
 		as.maakNieuweAanbieder(abc);
