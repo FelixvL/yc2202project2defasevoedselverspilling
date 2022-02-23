@@ -15,9 +15,9 @@ public class ItemService {
 	@Autowired
 	ItemRepository ir;
 
-	public Iterable<Item> go() {
-		 Iterable<Item> abcdef = ir.findAll();
-		 return abcdef;
+	public Iterable<Item> getallitems() {
+		 Iterable<Item> items = ir.findAll();
+		 return items;
 	}
 	
 	public void CreateItem(Item item) {

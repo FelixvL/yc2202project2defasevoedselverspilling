@@ -18,10 +18,10 @@ public class ItemEndpoint {
 
 	@Autowired
 	ItemService is;
-	
-	@GetMapping("/marianne/getall")
+
+	@GetMapping("/getitemlist")
 	public Iterable<Item> getmeallget() {	
-		return is.go();
+		return is.getallitems();
 	}
 	
 	@PostMapping("/CreateItem")
