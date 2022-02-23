@@ -14,6 +14,7 @@ public class AfhaalAfspraakService {
 		AfhaalAfspraak aa = new AfhaalAfspraak();
 		aa.setTitel(deTitel);
 		aar.save(aa);
+	
 	}
 	
 	public void maakNieuweAfhaalAfspraak() {
