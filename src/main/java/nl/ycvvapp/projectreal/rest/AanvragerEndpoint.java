@@ -12,17 +12,15 @@ public class AanvragerEndpoint {
 	@Autowired
 	AanvragerService aas;
 	
-//	@Autowired
-//	Aanvrager aa;
 	
-	@GetMapping("/jesseTest")
+	@GetMapping("/jesse/jesseTest")
 	public void herewego() {
 		aas.maakNieuweAanbieder();
 		System.out.println("here we goo jesse");
 	}
 	
-	@GetMapping("/returntype")
-	public Aanvrager aanvrager (){
+	@GetMapping("/jesse/returntype")
+	public Aanvrager aanvrager() {
 		Aanvrager aa = new Aanvrager();
 		aa.setAantalPersonen(10);
 		aa.setBedrijfsnaam("macDonalds");
