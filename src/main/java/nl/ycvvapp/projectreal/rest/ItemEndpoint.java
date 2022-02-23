@@ -15,17 +15,11 @@ public class ItemEndpoint {
 
 	@Autowired
 	ItemService is;
+
 	
-	@GetMapping ("/marianne/eerstemethode") 
-	public String eersteMethode() {
-		System.out.println("testmethode 1 werkt");
-		is.maakNieuwItem();
-		return "dit is de output van de eerste methode";
-	}
-	
-	@GetMapping("/marianne/getall")
+	@GetMapping("/getitemlist")
 	public Iterable<Item> getmeallget() {	
-		return is.go();
+		return is.getallitems();
 	}
 	
 }
