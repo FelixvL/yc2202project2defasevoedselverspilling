@@ -6,6 +6,7 @@ import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import nl.ycvvapp.projectreal.domein.Aanbieder;
 import nl.ycvvapp.projectreal.domein.AfhaalAfspraak;
 import nl.ycvvapp.projectreal.domein.Item;
 
@@ -13,12 +14,16 @@ import nl.ycvvapp.projectreal.domein.Item;
 public class ItemService {
 	@Autowired
 	ItemRepository ir;
-	
 
 	public Iterable<Item> getallitems() {
 		 Iterable<Item> items = ir.findAll();
 		 return items;
 	}
+	
+	public void CreateItem(Item item) {
+		ir.save(item);
+	}
+	
 		
 }	
 
