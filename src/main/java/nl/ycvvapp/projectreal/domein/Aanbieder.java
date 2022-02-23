@@ -11,5 +11,40 @@ public class Aanbieder {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	
-	public String naam;
+	private String username;
+	private String naam;
+	private String gebruikersnaam;
+	private String wachtwoord;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getNaam() {
+		return naam;
+	}
+	public void setNaam(String naam) {
+		this.naam = naam;
+	}
+	public String getGebruikersnaam() {
+		return gebruikersnaam;
+	}
+	public void setGebruikersnaam(String gebruikersnaam) {
+		this.gebruikersnaam = gebruikersnaam;
+	}
+	public String getWachtwoord() {
+		return wachtwoord;
+	}
+	public void setWachtwoord(String wachtwoord) {
+		this.wachtwoord = wachtwoord;
+	}
+	
+	
 }

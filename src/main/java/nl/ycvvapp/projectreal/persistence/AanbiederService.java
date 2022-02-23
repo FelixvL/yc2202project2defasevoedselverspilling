@@ -12,7 +12,6 @@ public class AanbiederService {
 	
 	public void maakNieuweAanbieder(String naam) {
 		Aanbieder a = new Aanbieder();
-		a.naam = naam;
 		ar.save(a);
 		System.out.println("Ik ben een nieuwe aanbieder");
 	}
