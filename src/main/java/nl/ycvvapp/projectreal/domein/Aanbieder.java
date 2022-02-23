@@ -11,21 +11,16 @@ public class Aanbieder {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	
-	private String username;
 	private String naam;
 	private String gebruikersnaam;
+	private String email;
 	private String wachtwoord;
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
 	}
 	public String getNaam() {
 		return naam;
@@ -44,6 +39,12 @@ public class Aanbieder {
 	}
 	public void setWachtwoord(String wachtwoord) {
 		this.wachtwoord = wachtwoord;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	
