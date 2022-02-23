@@ -13,4 +13,12 @@ public class AanbiederService {
 	public void CreateAanbieder( Aanbieder aanbieder) {
 		ar.save(aanbieder);
 	}
+	public void DeleteAanbieder( long id) {
+        ar.deleteById(id);
+        }
+
+    public Iterable<Aanbieder> GetAllAanbieders() {
+         Iterable<Aanbieder> al = ar.findAll();
+         return al;
+    }
 }
