@@ -24,6 +24,9 @@ public class ItemService {
 		ir.save(item);
 	}
 	
+	public void DeleteItem(long id) {
+        ir.deleteById(id);
+        }
 		
 }	
 

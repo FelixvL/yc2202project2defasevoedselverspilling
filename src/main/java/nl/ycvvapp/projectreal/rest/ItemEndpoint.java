@@ -1,6 +1,7 @@
 package nl.ycvvapp.projectreal.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +21,7 @@ public class ItemEndpoint {
 	ItemService is;
 
 	@GetMapping("/getitemlist")
-	public Iterable<Item> getmeallget() {	
+	public Iterable<Item> getmeallget() {
 		return is.getallitems();
 	}
 	
@@ -28,5 +29,13 @@ public class ItemEndpoint {
 	public void createItem(@RequestBody Item item) {
 		is.CreateItem(item);
 	}
+
+	@DeleteMapping("/DeleteItem")
+	public void deleteItem(long id) {
+		is.DeleteItem(id);
+		
+	}
+	
 	
 }
+
