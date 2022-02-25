@@ -11,6 +11,9 @@ import nl.ycvvapp.projectreal.domein.Item;
 @Component
 public interface ItemRepository extends CrudRepository<Item, Long> {
 	
+	
+	
 	List <Item> findByAangebodenTrue();
+	List <Item> findAllByOrderByDatum();
 
 }

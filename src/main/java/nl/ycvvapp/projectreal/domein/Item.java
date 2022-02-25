@@ -21,6 +21,7 @@ public class Item {
 	//note foto moet uiteindelijk een blob worden om goed opgeslagen te worden
 	private String foto;
 	private boolean aangeboden;
+	
 
 //	@OneToMany
 //	List<Chat> chat1;
@@ -43,6 +44,7 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public LocalDate getDatum() {
 		return datum;
 	}

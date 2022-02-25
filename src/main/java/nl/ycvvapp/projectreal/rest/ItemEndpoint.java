@@ -29,6 +29,11 @@ public class ItemEndpoint {
 	public List<Item> getAangebodenItemlist() {
 		return is.getAllAangebodenItems();
 	}
+
+	@GetMapping ("/getlistitembydate")
+	public List<Item> getListItemByDate() {
+		return is.getAllItemsSortedByDate();
+	}
 	
 	
 	@PostMapping("/CreateItem")
