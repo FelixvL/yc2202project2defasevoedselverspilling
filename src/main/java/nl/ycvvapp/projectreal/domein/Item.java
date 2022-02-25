@@ -1,5 +1,10 @@
 package nl.ycvvapp.projectreal.domein;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,12 +18,13 @@ public class Item {
 	
 	long id;
 	private String name;
-	private String datum;
+	private LocalDate datum;
 	private int aantal;
 	private String gewicht;
 	//note foto moet uiteindelijk een blob worden om goed opgeslagen te worden
 	private String foto;
 	private boolean aangeboden;
+	
 
 //	@OneToMany
 //	List<Chat> chat1;
@@ -41,10 +47,11 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDatum() {
+
+	public LocalDate getDatum() {
 		return datum;
 	}
-	public void setDatum(String datum) {
+	public void setDatum(LocalDate datum) {
 		this.datum = datum;
 	}
 	public int getAantal() {
