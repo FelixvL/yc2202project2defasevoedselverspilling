@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Aanvrager {
@@ -11,31 +14,35 @@ public class Aanvrager {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	
-	private String titel;
-	private int aantalPersonen;
-	private String bedrijfsnaam;
+	private String postCode;
+	private String huisNummer;
+	
+	@JsonIgnore
+	@OneToOne(mappedBy = "aanvrager")
+	private User user;
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getTitel() {
-		return titel;
+	public String getPostCode() {
+		return postCode;
 	}
-	public void setTitel(String titel) {
-		this.titel = titel;
+	public void setPostCode(String postCode) {
+		this.postCode = postCode;
 	}
-	public int getAantalPersonen() {
-		return aantalPersonen;
+	public String getHuisNummer() {
+		return huisNummer;
 	}
-	public void setAantalPersonen(int aantalPersonen) {
-		this.aantalPersonen = aantalPersonen;
+	public void setHuisNummer(String huisNummer) {
+		this.huisNummer = huisNummer;
 	}
-	public String getBedrijfsnaam() {
-		return bedrijfsnaam;
+	public User getUser() {
+		return user;
 	}
-	public void setBedrijfsnaam(String bedrijfsnaam) {
-		this.bedrijfsnaam = bedrijfsnaam;
+	public void setUser(User user) {
+		this.user = user;
 	}
 }
