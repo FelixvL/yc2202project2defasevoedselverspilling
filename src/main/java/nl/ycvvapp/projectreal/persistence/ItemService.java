@@ -1,6 +1,7 @@
 
 package nl.ycvvapp.projectreal.persistence;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,22 @@ public class ItemService {
 	ItemRepository ir;
 
 	public Iterable<Item> getallitems() {
-		 Iterable<Item> items = ir.findAll();
-		 return items;
+		 return ir.findAll();
 	}
 	
 	public void CreateItem(Item item) {
 		ir.save(item);
 	}
+	
+	public void DeleteItem(long id) {
+        ir.deleteById(id);
+        }
+	
+	public List<Item> getAllAangebodenItems() {
+		 return ir.findByAangebodenTrue();
+	
+	}
+	
 	
 		
 }	
