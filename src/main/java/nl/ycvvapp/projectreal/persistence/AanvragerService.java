@@ -11,10 +11,7 @@ public class AanvragerService {
 	@Autowired
 	AanvragerRepository aar;
 	
-	public void maakNieuweAanbieder() {
-		Aanvrager aa = new Aanvrager();
-		aa.setTitel("mijn titel");
-		aar.save(aa);
-		System.out.println("Ik ben in nieuwe Aanbiederservice");
+	public void CreateAanvrager(Aanvrager aanvrager) {
+		aar.save(aanvrager);
 	}
 }
