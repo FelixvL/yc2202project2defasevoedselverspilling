@@ -18,10 +18,17 @@ public class Item {
 	private String gewicht;
 	//note foto moet uiteindelijk een blob worden om goed opgeslagen te worden
 	private String foto;
+	private boolean aangeboden;
 
 //	@OneToMany
 //	List<Chat> chat1;
 	
+	public boolean isAangeboden() {
+		return aangeboden;
+	}
+	public void setAangeboden(boolean aangeboden) {
+		this.aangeboden = aangeboden;
+	}
 	public long getId() {
 		return id;
 	}

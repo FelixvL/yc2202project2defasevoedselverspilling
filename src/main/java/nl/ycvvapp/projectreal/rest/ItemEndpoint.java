@@ -1,5 +1,7 @@
 package nl.ycvvapp.projectreal.rest;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +26,12 @@ public class ItemEndpoint {
 	public Iterable<Item> getmeallget() {
 		return is.getallitems();
 	}
+	
+	@GetMapping ("/getaangebodenitemlist")
+	public List<Item> getAangebodenItemlist() {
+		return is.getAllAangebodenItems();
+	}
+	
 	
 	@PostMapping("/CreateItem")
 	public void createItem(@RequestBody Item item) {
