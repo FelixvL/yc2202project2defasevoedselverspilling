@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import nl.ycvvapp.projectreal.domein.Item;
+import nl.ycvvapp.projectreal.domein.User;
 import nl.ycvvapp.projectreal.persistence.ItemService;
 
 @RestController
@@ -37,7 +38,7 @@ public class ItemEndpoint {
 	
 	
 	@PostMapping("/CreateItem")
-	public void createItem(@RequestBody Item item) {
+	public void createItem(@RequestBody Item item, User userid) {
 		is.CreateItem(item);
 	}
 

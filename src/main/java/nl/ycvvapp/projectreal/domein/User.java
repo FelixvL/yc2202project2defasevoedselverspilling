@@ -1,9 +1,12 @@
 package nl.ycvvapp.projectreal.domein;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -19,6 +22,9 @@ public class User {
 	
 	@OneToOne()
 	private Aanvrager aanvrager;
+	
+	@OneToMany()
+	private List<Item> items;
 	
 	public long getId() {
 		return id;
@@ -49,6 +55,12 @@ public class User {
 	}
 	public void setAanvrager(Aanvrager aanvrager) {
 		this.aanvrager = aanvrager;
+	}
+	public List<Item> getItems() {
+		return items;
+	}
+	public void setItems(List<Item> items) {
+		this.items = items;
 	}
 	
 }

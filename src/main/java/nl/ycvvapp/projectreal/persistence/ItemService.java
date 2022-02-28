@@ -16,6 +16,8 @@ public class ItemService {
 	@Autowired
 	ItemRepository ir;
 
+	
+	
 	public Iterable<Item> getallitems() {
 		 return ir.findAll();
 	}
