@@ -35,6 +35,10 @@ public class ItemService {
 	
 	}
 	
+	public List<Item> getAllItemsSortedByDate(){
+		return ir.findAllByOrderByDatum();
+	}
+	
 	
 		
 }	
